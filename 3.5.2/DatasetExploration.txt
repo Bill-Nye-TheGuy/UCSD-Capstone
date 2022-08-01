@@ -1,0 +1,11 @@
+1:https://www.kaggle.com/datasets/mozillaorg/common-voice
+	^Chosen Dataset^
+2:https://www.kaggle.com/datasets/rtatman/speech-accent-archive
+	^Not Large Enough^
+3:https://www.kaggle.com/datasets/mfekadu/english-multispeaker-corpus-for-voice-cloning
+	^Great Dataset but the chosen one is still larger.^
+
+For the chosen dataset:
+Hosted on Kaggle.com
+Much greater than 15k samples.
+Open license.
