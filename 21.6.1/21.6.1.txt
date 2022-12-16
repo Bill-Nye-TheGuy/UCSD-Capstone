@@ -1,0 +1,9 @@
+﻿Pick Your Deployment Method:
+I will deploy my model on Streamlit. They have many examples that I can follow to get up and running quickly at https://streamlit.io/gallery?category=streamlit-templates. Their cloud platform allows websites free of charge up to 1 GB of resources. So far my model will take up nowhere near that much space so it should fit within that restriction.
+
+
+Steps: 
+1. Finalize model
+2. Design Website architecture
+3. Load into Streamlit
+4. Bug check
