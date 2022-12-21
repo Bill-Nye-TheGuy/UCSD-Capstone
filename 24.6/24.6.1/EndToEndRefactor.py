@@ -39,6 +39,9 @@ class ModelAssets:
     #%% Data Feature Pipeline
     def feature_extraction(self,filename, accent = None, sampling_rate=48000):
         #path = 'cv-valid-'+folder+'/'+filename
+        if filename[-4:] != '.mp3':
+            print("File must be MP3.")
+            return
         path = filename
         features = list()
         sound = AudioSegment.from_file(path) # Load Audio File
