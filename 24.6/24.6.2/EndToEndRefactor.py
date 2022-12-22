@@ -78,31 +78,16 @@ class ModelAssets:
         return S_df
     
     #%% Predict Using XGBoost
-    def predictWithXGB(self,features):
-        prediction = XBGModel.predict(features)
+    def predictWithXGB(self):
+        print(11)
+        prediction = XBGModel.predict(self.f.values)
+        print(11)
         return str(LabelEncode.classes_[prediction])
         
     #%% Predict using DL
-    def predictWithDL(self,features):
-        prediction = TFModel.predict(TFScale.transform(features.values)).argmax(1)
+    def predictWithDL(self):
+        prediction = TFModel.predict(TFScale.transform(self.f.values)).argmax(1)
         return str(LabelEncode.classes_[prediction])
-        
-    #%% Predict on a file with both algos
-    def predictOnFile(self,Filename):
-        f = self.feature_extraction(Filename)
-        print(3)
-        return f
-        '''
-        prediction = XBGModel.predict(f)
-        pred = TFModel.predict(TFScale.transform(f.values),verbose = 0).argmax(1)
-        print (prediction,pred)
-        return ['Deep Learning: ' + str(LabelEncode.classes_[pred]),'XGBoost: ' + str(LabelEncode.classes_[prediction])]
-        '''
-#%% CMD Flags
-'''
-if(args.file == None):
-    pass
-else:
-    print("Preicting on: " + args.file)
-    ModelAssets().predictOnFile(args.file)
-'''
+    
+    def createFeatures(self, Filename):
+        self.f = self.feature_extraction(Filename)
